@@ -1,0 +1,740 @@
+@import url('https://fonts.googleapis.com/css2?family=Yaldevi:wght@500&display=swap');
+
+:root{
+    --main-color:rgb(93, 162, 162);
+    --black:#0e0f0fc2;
+    --bg:#45456c52;
+    --border:.1rem solid rgba(19, 18, 18, 0.551);
+}
+
+*{
+    font-family: 'Yaldevi', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 60%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+
+
+body{
+    background: var(--bg);
+    overflow: hidden;
+    margin: 0%;
+}
+
+section{
+    padding:2rem 7%;
+}
+
+.heading{
+    text-align: center;
+    color:#fff;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+.heading::selection{
+    background-color: rgb(79, 133, 133);
+    color: rgb(253, 251, 251);
+    }  
+
+.heading span{
+    color:var(--main-color);
+    text-transform: uppercase;
+}
+.heading span::selection{
+background-color: rgb(79, 133, 133);
+    color: rgb(253, 251, 251);
+    }
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.9rem 3rem;
+    font-size: 1.7rem;
+    color:#fff;
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+.btn:hover{
+    letter-spacing: .2rem;
+}
+
+.header{
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top:0; left: 0; right: 0;
+    z-index: 1000;
+}
+
+.header .logo img{
+    height: 5rem;
+}
+
+.header .navbar a{
+    margin:0 1rem;
+    font-size: 1.6rem;
+    color:#fff;
+}
+
+.header .navbar a:hover{
+    color:var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.header .icons div{
+    color:#fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover{
+    color:var(--main-color);
+}
+
+
+.header .search-form{
+    position: absolute;
+    top:115%; right: 7%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.header .search-form.active{
+    transform: scaleY(1);
+}
+
+.header .search-form input{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color:var(--black);
+    padding:1rem;
+    text-transform: none;
+}
+
+.header .search-form label{
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color:var(--black);
+}
+
+.header .search-form label:hover{
+    color:var(--main-color);
+}
+
+.header .cart-items-container{
+    position: absolute;
+    top:100%; right: -100%;
+    height: calc(100vh - 9.5rem);
+    width: 35rem;
+    background: #fff;
+    padding:0 1.5rem;
+}
+
+.header .cart-items-container.active{
+    right: 0;
+}
+
+.header .cart-items-container .cart-item{
+    position: relative;
+    margin:2rem 0;
+    display: flex;
+    align-items: center;
+    gap:1.5rem;
+}
+
+.header .cart-items-container .cart-item .fa-times{
+    position: absolute;
+    top:1rem; right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--black);
+}
+
+.header .cart-items-container .cart-item .fa-times:hover{
+    color:var(--main-color);
+}
+
+.header .cart-items-container .cart-item img{
+    height: 7rem;
+}
+
+.header .cart-items-container .cart-item .content h3{
+    font-size: 2rem;
+    color:var(--black);
+    padding-bottom: .5rem;
+}
+
+.header .cart-items-container .cart-item .content .price{
+    font-size: 1.5rem;
+    color:var(--main-color);
+}
+
+.header .cart-items-container .btn{
+    width: 100%;
+    text-align: center;
+}
+
+.home{
+    margin-top: 75px;
+    height: auto;
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    background:url(../images/menu.jfif) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    min-height: 100vh;
+}
+
+.municipalites_title{
+    display: flex;
+    align-items: center;
+    background:url(../images/image2.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+   height: auto;
+  
+  min-height: 40vh;
+}
+
+.home .content{
+    max-width: 60rem;
+}
+
+.home .content h3{
+    font-size: 6rem;
+    color:#fff;
+}
+.home .content h3::selection{
+    background-color: rgb(79, 133, 133);
+    color: rgb(253, 251, 251);
+}
+
+
+.home .content p{
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding:1rem 0;
+    text-transform: none;
+    color:#eee;
+}
+
+.home .content p::selection{
+background-color: rgb(79, 133, 133);
+    color: rgb(253, 251, 251);
+}
+
+.contact .row{
+    display: flex;
+    background:var(--black);
+    flex-wrap: wrap;
+    gap:1rem;
+}
+
+.contact .row .map{
+    flex:1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact .row form{
+    flex:1 1 45rem;
+    padding:5rem 2rem;
+    text-align: center;
+}
+
+.contact .row form h3{
+    font-size: 3.5rem;
+    color:#fff;
+}
+.contact .row form h3::selection{
+background-color: rgb(79, 133, 133);
+color: rgb(253, 251, 251);
+}
+
+.contact .row form .inputBox{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background:var(--bg);
+    border:var(--border);
+}
+.contact .row form .inputBox input::selection{
+    background-color: rgb(79, 133, 133);
+    color: rgb(253, 251, 251);
+}
+.contact .row form .inputBox span{
+    color:#fff;
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+
+.contact .row form .inputBox input{
+    width: 100%;
+    padding:2rem;
+    font-size: 1.7rem;
+    color:#fff;
+    text-transform: none;
+    background:none;
+}
+
+.article .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+}
+
+.article .box-container .box{
+    border:var(--border);    
+}
+
+.article .box-container .box .image{
+    height: 25rem;
+    overflow:hidden;
+    width: 100%;
+}
+
+.article .box-container .box .image img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.article .box-container .box:hover .image img{
+    transform: scale(1.2);
+}
+
+.article .box-container .box .content{
+    padding:2rem;
+}
+
+.article .box-container .box .content .title{
+    font-size: 2.5rem;
+    line-height: 1.5;
+    color:#fff;
+}
+.article .box-container .box .content .title::selection{
+background-color: rgb(79, 133, 133);
+color: rgb(253, 251, 251);
+}
+
+.article .box-container .box .content .title:hover{
+    color:var(--main-color);
+}
+
+.article .box-container .box .content span{
+    color:var(--main-color);
+    display: block;
+    padding-top: 1rem;
+    font-size: 2rem;
+}
+.article .box-container .box .content span::selection{
+    background-color: rgb(79, 133, 133);
+    color: rgb(253, 251, 251);
+    } 
+    
+.article .box-container .box .content p{
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color:#ccc;
+    padding:1rem 0;
+    text-transform: none;
+}
+.article .box-container .box .content p::selection{
+    background-color: rgb(79, 133, 133);
+    color: rgb(253, 251, 251);
+    } 
+/* .cursor{
+    width: 40px;
+    height: 40px;
+    cursor: none;
+    border: 1px dashed white;
+    border-radius: 50%;
+    position: absolute;
+} */
+
+.footer{
+    background:var(--black);
+    text-align: center;
+}
+
+.footer .share{
+    padding:1rem 0;
+}
+
+.footer .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color:#fff;
+    border:var(--border);
+    margin:.3rem;
+    border-radius: 50%;
+}
+
+.footer .share a:hover{
+    background-color: var(--main-color);
+}
+
+.footer .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+    gap:1rem;
+}
+
+.footer .links a{
+    padding:.7rem 2rem;
+    color:#fff;
+    border:var(--border);
+    font-size: 2rem;
+}
+
+.footer .links a:hover{
+    background:var(--main-color);
+}
+
+.footer .credit{
+    font-size: 2rem;
+    color:#fff;
+    font-weight: lighter;
+    padding:1.5rem;
+}
+
+.footer .credit span{
+    color:var(--main-color);
+}
+
+
+
+/* media queries  */
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding:1.5rem 2rem;
+    }
+
+    section{
+        padding:2rem;
+    }
+
+}
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+   
+
+    .home{
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .home .content h3{
+        font-size: 4.5rem;
+    }
+    
+
+    .home .content p{
+        font-size: 1.5rem;
+    }
+
+}
+
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+}
+/* //////////////////////////municipalité///////////////////////////// */
+
+.homeMuni{
+    margin-top: 75px;
+    height: auto;
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    background:url(../images/banner\ 2.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+} 
+
+.homeMuni{
+    height: 10px;
+    background-position: left;
+    justify-content: center;
+    text-align: center;
+}
+
+.homeMuni .content h3{
+    height: 70px;
+    font-size: 5.5rem;
+}
+.homeMuni .content h3::selection{
+    background-color: rgb(79, 133, 133);
+    color: rgb(253, 251, 251);
+    }
+
+.homeMuni .content p{
+    text-transform: none;
+    font-size: 2.5rem;
+}
+.homeMuni .content p::selection{
+    background-color: rgb(79, 133, 133);
+    color: rgb(253, 251, 251);
+    }
+
+  
+.homeMuni .content .chemin{
+    font-size: 1.75rem;
+    color:white;
+}
+
+.homeMuni .content .chemin a{
+    color: white;
+    font-size: 1.75rem;
+}
+
+
+.box-container{
+    justify-content: center;
+    width: 96%;
+   
+}
+.services .box-container .box{
+    flex-wrap: wrap;
+   
+  
+}
+.services .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+}
+
+.services .box-container .box{
+    border:var(--border);    
+}
+
+.services .box-container .box .image{
+    height: 25rem;
+    overflow:hidden;
+    width: 100%;
+}
+
+.services .box-container .box .image img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.services .box-container .box:hover .image img{
+    transform: scale(1.2);
+}
+
+.services .box-container .box .content{
+    padding:2rem;
+}
+.services .box-container .box .content::selection{
+    background-color: rgb(79, 133, 133);
+    color: rgb(253, 251, 251);
+    } 
+
+.services .box-container .box .content .title{
+    font-size: 2.5rem;
+    line-height: 1.5;
+    color:#fff;
+}
+.services .box-container .box .content .title::selection{
+background-color: rgb(79, 133, 133);
+color: rgb(253, 251, 251);
+}
+
+.services .box-container .box .content .title:hover{
+    color:var(--main-color);
+}
+
+.services .box-container .box .content span{
+    color:var(--main-color);
+    display: block;
+    padding-top: 1rem;
+    font-size: 2rem;
+}
+.services .box-container .box .content span::selection{
+    background-color: rgb(79, 133, 133);
+    color: rgb(253, 251, 251);
+    } 
+    
+.services .box-container .box .content p1{
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color:rgb(115, 114, 114);
+    padding:1rem 0;
+    text-transform: none;
+}
+.services .box-container .box .content p1::selection{
+    background-color: rgb(79, 133, 133);
+    color: rgb(253, 251, 251);
+    } 
+    .services .box-container .box .content p2::selection{
+        background-color: rgb(79, 133, 133);
+        color: rgb(253, 251, 251);
+        } 
+.services .box-container .box .content p2{
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color:rgb(115, 114, 114);
+    padding:1rem 0;
+    text-transform: none;
+}
+.services .box-container .box .content p1:hover{
+    color:rgb(53, 110, 191);
+}
+.services .box-container .box .content p2:hover{
+    color:rgb(155, 78, 78);
+}
+.services .box-container .box .content p::selection{
+    background-color: rgb(79, 133, 133);
+    color: rgb(253, 251, 251);
+    } 
+    .homeServ{
+        margin-top: 75px;
+        height: auto;
+        min-height: 55vh;
+        display: flex;
+        align-items: center;
+        background:url(../images/serv.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    } 
+    
+    .homeServ{
+        height: 10px;
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .homeServ .content h3{
+        height: 70px;
+        font-size: 5.5rem;
+        color: white;
+    }
+    .homeServ .content h3{
+        height: 70px;
+        font-size: 5.5rem;
+        color: white;
+    }
+
+    .homeServ .content h3::selection{
+        background-color: rgb(79, 133, 133);
+        color: rgb(253, 251, 251);
+        }
+    
+    .homeServ .content p::selection{
+        background-color: rgb(79, 133, 133);
+        color: rgb(253, 251, 251);
+        }
+    .homeServ .content p{
+        text-transform: none;
+        font-size: 2.5rem;
+        color: rgba(255, 255, 255, 0.973);
+    }
+    
+    .homeServ .content .chemin{
+        font-size: 1.75rem;
+    }
+    
+    .homeServ .content .chemin a{
+        color: white;
+        font-size: 1.75rem;
+    }
+
+    .homeAct{
+        margin-top: 75px;
+        height: auto;
+        min-height: 55vh;
+        display: flex;
+        align-items: center;
+        background:url(../images/accro.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    } 
+    
+    .homeAct{
+        height: 10px;
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .homeAct .content h3{
+        color: white;
+        height: 70px;
+        font-size: 5.5rem;
+    }
+    .homeAct .content h3::selection{
+        background-color: rgb(85, 96, 96);
+        color: rgb(253, 251, 251);
+        }
+    
+    .homeAct .content p{
+        color: white;
+        text-transform: none;
+        font-size: 2.5rem;
+    }
+    .homeAct .content p::selection{
+        background-color: rgb(79, 133, 133);
+        color: rgb(253, 251, 251);
+        }
+    
+    .homeAct .content .chemin{
+        font-size: 1.75rem;
+    }
+    
+    .homeAct .content .chemin a{
+        color: white;
+        font-size: 1.75rem;
+    }
