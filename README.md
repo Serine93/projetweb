@@ -7,3 +7,11 @@ Ce site est un projet dans le cadre de mon PJS3 en DUT2. Il a pour but d'offrir 
 - Beaucoups d'interactions et d'animations.
 - Fonctionnalité bootstrap
 - Responsivités
+
+## Crédits
+
+**Développé par Serine BETTAYEB **
+
+## License
+
+MIT © [Serine Bettayeb](https://github.com/Serine93)
