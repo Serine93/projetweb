@@ -10,7 +10,7 @@ Ce site est un projet dans le cadre de mon PJS3 en DUT2. Il a pour but d'offrir 
 
 ## Crédits
 
-**Développé par Serine BETTAYEB **
+**Développée par Serine BETTAYEB **
 
 ## License
 
