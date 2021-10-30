@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Yaldevi:wght@500&display=swap');
 
 :root{
+    
     --main-color:rgb(93, 162, 162);
     --black:#0e0f0fc2;
-    --bg:#45456c52;
+    --bg:#0b388552;
     --border:.1rem solid rgba(19, 18, 18, 0.551);
 }
 
 *{
-    font-family: 'Yaldevi', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin:0; padding:0;
     box-sizing: border-box;
     outline: none; border:none;
@@ -16,20 +17,33 @@
     text-transform: capitalize;
     transition: .2s linear;
 }
+*::selection{
+    background-color: rgb(79, 133, 133);
+    color: rgb(253, 251, 251);
+}
 
 html{
-    font-size: 60%;
+    font-size: 62.5%;
     overflow-x: hidden;
     scroll-padding-top: 9rem;
     scroll-behavior: smooth;
 }
 
+html::-webkit-scrollbar{
+    width: .8rem;
+}
 
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
 
 body{
     background: var(--bg);
-    overflow: hidden;
-    margin: 0%;
 }
 
 section{
@@ -43,19 +57,11 @@ section{
     padding-bottom: 3.5rem;
     font-size: 4rem;
 }
-.heading::selection{
-    background-color: rgb(79, 133, 133);
-    color: rgb(253, 251, 251);
-    }  
 
 .heading span{
     color:var(--main-color);
     text-transform: uppercase;
 }
-.heading span::selection{
-background-color: rgb(79, 133, 133);
-    color: rgb(253, 251, 251);
-    }
 
 .btn{
     margin-top: 1rem;
@@ -84,7 +90,7 @@ background-color: rgb(79, 133, 133);
 }
 
 .header .logo img{
-    height: 5rem;
+    height: 6rem;
 }
 
 .header .navbar a{
@@ -110,6 +116,9 @@ background-color: rgb(79, 133, 133);
     color:var(--main-color);
 }
 
+#menu-btn{
+    display: none;
+}
 
 .header .search-form{
     position: absolute;
@@ -201,27 +210,15 @@ background-color: rgb(79, 133, 133);
 }
 
 .home{
-    margin-top: 75px;
+    margin-top: 93px;
+    min-height: 30vh;
     height: auto;
-    min-height: 55vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
     background:url(../images/menu.jfif) no-repeat;
     background-size: cover;
     background-position: center;
-
-    min-height: 100vh;
-}
-
-.municipalites_title{
-    display: flex;
-    align-items: center;
-    background:url(../images/image2.jpg) no-repeat;
-    background-position: center;
-    background-size: cover;
-   height: auto;
-  
-  min-height: 40vh;
 }
 
 .home .content{
@@ -230,81 +227,17 @@ background-color: rgb(79, 133, 133);
 
 .home .content h3{
     font-size: 6rem;
+    text-transform: uppercase;
     color:#fff;
 }
-.home .content h3::selection{
-    background-color: rgb(79, 133, 133);
-    color: rgb(253, 251, 251);
-}
-
 
 .home .content p{
     font-size: 2rem;
     font-weight: lighter;
     line-height: 1.8;
     padding:1rem 0;
-    text-transform: none;
     color:#eee;
-}
-
-.home .content p::selection{
-background-color: rgb(79, 133, 133);
-    color: rgb(253, 251, 251);
-}
-
-.contact .row{
-    display: flex;
-    background:var(--black);
-    flex-wrap: wrap;
-    gap:1rem;
-}
-
-.contact .row .map{
-    flex:1 1 45rem;
-    width: 100%;
-    object-fit: cover;
-}
-
-.contact .row form{
-    flex:1 1 45rem;
-    padding:5rem 2rem;
-    text-align: center;
-}
-
-.contact .row form h3{
-    font-size: 3.5rem;
-    color:#fff;
-}
-.contact .row form h3::selection{
-background-color: rgb(79, 133, 133);
-color: rgb(253, 251, 251);
-}
-
-.contact .row form .inputBox{
-    display: flex;
-    align-items: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    background:var(--bg);
-    border:var(--border);
-}
-.contact .row form .inputBox input::selection{
-    background-color: rgb(79, 133, 133);
-    color: rgb(253, 251, 251);
-}
-.contact .row form .inputBox span{
-    color:#fff;
-    font-size: 2rem;
-    padding-left: 2rem;
-}
-
-.contact .row form .inputBox input{
-    width: 100%;
-    padding:2rem;
-    font-size: 1.7rem;
-    color:#fff;
     text-transform: none;
-    background:none;
 }
 
 .article .box-container{
@@ -373,14 +306,57 @@ color: rgb(253, 251, 251);
     background-color: rgb(79, 133, 133);
     color: rgb(253, 251, 251);
     } 
-/* .cursor{
-    width: 40px;
-    height: 40px;
-    cursor: none;
-    border: 1px dashed white;
-    border-radius: 50%;
-    position: absolute;
-} */
+
+.contact .row{
+    display: flex;
+    background:var(--black);
+    flex-wrap: wrap;
+    gap:1rem;
+}
+
+.contact .row .map{
+    flex:1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact .row form{
+    flex:1 1 45rem;
+    padding:5rem 2rem;
+    text-align: center;
+}
+
+.contact .row form h3{
+    text-transform: none;
+    font-size: 3.5rem;
+    color:#fff;
+}
+
+.contact .row form .inputBox{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background:var(--bg);
+    border:var(--border);
+}
+
+.contact .row form .inputBox span{
+    color:#fff;
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+
+.contact .row form .inputBox input{
+    width: 100%;
+    padding:2rem;
+    font-size: 1.7rem;
+    color:#fff;
+    text-transform: none;
+    background:none;
+}
+
+
 
 .footer{
     background:var(--black);
@@ -436,113 +412,6 @@ color: rgb(253, 251, 251);
     color:var(--main-color);
 }
 
-
-
-/* media queries  */
-@media (max-width:991px){
-
-    html{
-        font-size: 55%;
-    }
-
-    .header{
-        padding:1.5rem 2rem;
-    }
-
-    section{
-        padding:2rem;
-    }
-
-}
-
-@media (max-width:768px){
-
-    #menu-btn{
-        display: inline-block;
-    }
-
-   
-
-    .home{
-        background-position: left;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .home .content h3{
-        font-size: 4.5rem;
-    }
-    
-
-    .home .content p{
-        font-size: 1.5rem;
-    }
-
-}
-
-
-@media (max-width:450px){
-
-    html{
-        font-size: 50%;
-    }
-
-}
-/* //////////////////////////municipalité///////////////////////////// */
-
-.homeMuni{
-    margin-top: 75px;
-    height: auto;
-    min-height: 55vh;
-    display: flex;
-    align-items: center;
-    background:url(../images/banner\ 2.jpeg) no-repeat;
-    background-size: cover;
-    background-position: center;
-} 
-
-.homeMuni{
-    height: 10px;
-    background-position: left;
-    justify-content: center;
-    text-align: center;
-}
-
-.homeMuni .content h3{
-    height: 70px;
-    font-size: 5.5rem;
-}
-.homeMuni .content h3::selection{
-    background-color: rgb(79, 133, 133);
-    color: rgb(253, 251, 251);
-    }
-
-.homeMuni .content p{
-    text-transform: none;
-    font-size: 2.5rem;
-}
-.homeMuni .content p::selection{
-    background-color: rgb(79, 133, 133);
-    color: rgb(253, 251, 251);
-    }
-
-  
-.homeMuni .content .chemin{
-    font-size: 1.75rem;
-    color:white;
-}
-
-.homeMuni .content .chemin a{
-    color: white;
-    font-size: 1.75rem;
-}
-
-
-.box-container{
-    justify-content: center;
-    width: 96%;
-   
-}
 .services .box-container .box{
     flex-wrap: wrap;
    
@@ -639,102 +508,85 @@ color: rgb(253, 251, 251);
     background-color: rgb(79, 133, 133);
     color: rgb(253, 251, 251);
     } 
-    .homeServ{
-        margin-top: 75px;
-        height: auto;
-        min-height: 55vh;
-        display: flex;
-        align-items: center;
-        background:url(../images/serv.jpg) no-repeat;
-        background-size: cover;
-        background-position: center;
-    } 
-    
-    .homeServ{
-        height: 10px;
+
+
+
+
+
+
+
+
+
+
+
+/* media queries  */
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding:1.5rem 2rem;
+    }
+
+    section{
+        padding:2rem;
+    }
+
+}
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top:100%; right: -100%;
+        background: #fff;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+    }
+
+    .header .navbar.active{
+        right:0;
+    }
+
+    .header .navbar a{
+        color:var(--black);
+        display: block;
+        margin:1.5rem;
+        padding:.5rem;
+        font-size: 2rem;
+    }
+
+    .header .search-form{
+        width: 90%;
+        right: 2rem;
+    }
+
+    .home{
         background-position: left;
         justify-content: center;
         text-align: center;
     }
-    
-    .homeServ .content h3{
-        height: 70px;
-        font-size: 5.5rem;
-        color: white;
-    }
-    .homeServ .content h3{
-        height: 70px;
-        font-size: 5.5rem;
-        color: white;
+
+    .home .content h3{
+        font-size: 4.5rem;
     }
 
-    .homeServ .content h3::selection{
-        background-color: rgb(79, 133, 133);
-        color: rgb(253, 251, 251);
-        }
-    
-    .homeServ .content p::selection{
-        background-color: rgb(79, 133, 133);
-        color: rgb(253, 251, 251);
-        }
-    .homeServ .content p{
-        text-transform: none;
-        font-size: 2.5rem;
-        color: rgba(255, 255, 255, 0.973);
-    }
-    
-    .homeServ .content .chemin{
-        font-size: 1.75rem;
-    }
-    
-    .homeServ .content .chemin a{
-        color: white;
-        font-size: 1.75rem;
+    .home .content p{
+        font-size: 1.5rem;
     }
 
-    .homeAct{
-        margin-top: 75px;
-        height: auto;
-        min-height: 55vh;
-        display: flex;
-        align-items: center;
-        background:url(../images/accro.jpg) no-repeat;
-        background-size: cover;
-        background-position: center;
-    } 
-    
-    .homeAct{
-        height: 10px;
-        background-position: left;
-        justify-content: center;
-        text-align: center;
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
     }
-    
-    .homeAct .content h3{
-        color: white;
-        height: 70px;
-        font-size: 5.5rem;
-    }
-    .homeAct .content h3::selection{
-        background-color: rgb(85, 96, 96);
-        color: rgb(253, 251, 251);
-        }
-    
-    .homeAct .content p{
-        color: white;
-        text-transform: none;
-        font-size: 2.5rem;
-    }
-    .homeAct .content p::selection{
-        background-color: rgb(79, 133, 133);
-        color: rgb(253, 251, 251);
-        }
-    
-    .homeAct .content .chemin{
-        font-size: 1.75rem;
-    }
-    
-    .homeAct .content .chemin a{
-        color: white;
-        font-size: 1.75rem;
-    }
+
+}
